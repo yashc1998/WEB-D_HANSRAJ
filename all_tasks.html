@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="all_tasks_style.css" />
+  </head>
+  <body>
+
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center">Add Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <label for="task">Task Name</label>
+            <input type="text"
+              class="form-control" name="task" id="task-name" aria-describedby="helpId" placeholder="" required>
+          </div>
+          <div class="form-group">
+            <label for="task-end-date">Task End Date</label>
+            <input type="date"
+              class="form-control" name="task-end-date" id="task-end-date" aria-describedby="helpId" placeholder="" required>
+          </div>
+           <div class="form-group">
+             <label for="task-detail">TaskDetails</label>
+             <textarea class="form-control" name="task-detail" id="task-detail" rows="3" required></textarea>
+           </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="task-save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="container-fluid main-c p-0">     
+      <nav class="navbar navbar-expand-sm navbar-light bg-transparent">
+        <ul class="navbar-nav mr-auto mt-2" style="padding:0 2%">
+          <li class="nav-item active">
+            <a
+              class="navbar-brand text-white"
+              href="#"
+              >WorkDuler</a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a href="#" class="nav-link color-white"><img src="baseline-notifications-24px.svg" alt=""></a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" class="nav-link color-white"><img src="baseline-person-24px.svg" alt=""></a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+      <section class="content container-fluid  mt-5">
+        <div class="row">
+          <div class="sp col-md-9">
+              <ul class="timeline">
+                <h4 class="text-white">Tasks</h4>
+                <li class="row">
+                  <div class="col-md-11">
+                  <a target="_blank" href="https://www.totoprayogo.com/#"
+                    >New Web Design</a
+                  >
+                  <a href="#" class="float-right">21 March, 2019</a>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                    scelerisque diam non nisi semper, et elementum lorem ornare.
+                    Maecenas placerat facilisis mollis. Duis sagittis ligula in
+                    sodales vehicula....
+                  </p>
+                </div>
+                <div class="col-md-1">
+                  <ul class="tasks-actions">
+                    <li class="bg-green">
+                      <img src="baseline-check-24px.svg" alt="">
+                    </li>
+                    <li class="bg-red">
+                      <img src="baseline-delete-24px.svg" alt="">
+                    </li>
+                    <li data-toggle="collapse" data-target="#comments2" class="bg-blue">
+                      <img src="baseline-comment-24px.svg" alt="">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group w-100">
+                    <label for=""></label>
+                    <input type="text"
+                      class="form-control" name="" id="" aria-describedby="helpId" placeholder="comment here....">
+                  </div>
+                <div class="w-100 collapse" id="comments2" >
+                  
+
+                    <ul class="list-unstyled p-3">
+                      <li class="media">
+                        <a class="d-flex" href="#">
+                          <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                        </a>
+                        <div class="media-body ml-2">
+                          <h5 class="m-0">User 1</h5>
+                          <p>great work!</p>
+                        </div>
+                      </li>
+                      <li class="media">
+                          <a class="d-flex" href="#">
+                            <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                          </a>
+                          <div class="media-body ml-2">
+                            <h5 class="m-0">User 1</h5>
+                            <p>great work!</p>
+                          </div>
+                        </li>
+                        <li class="media">
+                            <a class="d-flex" href="#">
+                              <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                            </a>
+                            <div class="media-body ml-2">
+                              <h5 class="m-0">User 1</h5>
+                              <p>great work!</p>
+                            </div>
+                          </li>
+                      </ul>
+                  </div>
+                </li>
+                <li class="row">
+                    <div class="col-md-11">
+                    <a target="_blank" href="https://www.totoprayogo.com/#"
+                      >New Web Design</a
+                    >
+                    <a href="#" class="float-right">21 March, 2019</a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                      scelerisque diam non nisi semper, et elementum lorem ornare.
+                      Maecenas placerat facilisis mollis. Duis sagittis ligula in
+                      sodales vehicula....
+                    </p>
+                  </div>
+                  <div class="col-md-1">
+                      <ul class="tasks-actions">
+                          <li class="bg-green">
+                            <img src="baseline-check-24px.svg" alt="">
+                          </li>
+                          <li class="bg-red">
+                            <img src="baseline-delete-24px.svg" alt="">
+                          </li>
+                          <li data-toggle="collapse" data-target="#comments2" class="bg-blue">
+                            <img src="baseline-comment-24px.svg" alt="">
+                          </li>
+                        </ul>
+                  </div>
+                  <div class="form-group w-100">
+                      <label for=""></label>
+                      <input type="text"
+                        class="form-control" name="" id="" aria-describedby="helpId" placeholder="comment here....">
+                    </div>
+                  <div class="w-100 collapse" id="comments4" >
+                    
+  
+                      <ul class="list-unstyled p-3">
+                        <li class="media">
+                          <a class="d-flex" href="#">
+                            <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                          </a>
+                          <div class="media-body ml-2">
+                            <h5 class="m-0">User 1</h5>
+                            <p>great work!</p>
+                          </div>
+                        </li>
+                        <li class="media">
+                            <a class="d-flex" href="#">
+                              <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                            </a>
+                            <div class="media-body ml-2">
+                              <h5 class="m-0">User 1</h5>
+                              <p>great work!</p>
+                            </div>
+                          </li>
+                          <li class="media">
+                              <a class="d-flex" href="#">
+                                <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                              </a>
+                              <div class="media-body ml-2">
+                                <h5 class="m-0">User 1</h5>
+                                <p>great work!</p>
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </li>
+                  <li class="row">
+                      <div class="col-md-11">
+                      <a target="_blank" href="https://www.totoprayogo.com/#"
+                        >New Web Design</a
+                      >
+                      <a href="#" class="float-right">21 March, 2019</a>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                        scelerisque diam non nisi semper, et elementum lorem ornare.
+                        Maecenas placerat facilisis mollis. Duis sagittis ligula in
+                        sodales vehicula....
+                      </p>
+                    </div>
+                    <div class="col-md-1">
+                        <ul class="tasks-actions">
+                            <li class="bg-green">
+                              <img src="baseline-check-24px.svg" alt="">
+                            </li>
+                            <li class="bg-red">
+                              <img src="baseline-delete-24px.svg" alt="">
+                            </li>
+                            <li data-toggle="collapse" data-target="#comments2" class="bg-blue">
+                              <img src="baseline-comment-24px.svg" alt="">
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="w-100 collapse" id="comments1" >
+                      <div class="form-group w-100">
+                        <label for=""></label>
+                        <input type="text"
+                          class="form-control" name="" id="" aria-describedby="helpId" placeholder="comment here....">
+                      </div>
+    
+                        <ul class="list-unstyled p-3">
+                          <li class="media">
+                            <a class="d-flex" href="#">
+                              <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                            </a>
+                            <div class="media-body ml-2">
+                              <h5 class="m-0">User 1</h5>
+                              <p>great work!</p>
+                            </div>
+                          </li>
+                          <li class="media">
+                              <a class="d-flex" href="#">
+                                <img src="https://placeholder.photos/50x50" class="r-ounded-circle" alt="">
+                              </a>
+                              <div class="media-body ml-2">
+                                <h5 class="m-0">User 1</h5>
+                                <p>great work!</p>
+                              </div>
+                            </li>
+                            <li class="media">
+                                <a class="d-flex" href="#">
+                                  <img src="https://placeholder.photos/50x50" class="rounded-circle" alt="">
+                                </a>
+                                <div class="media-body ml-2">
+                                  <h5 class="m-0">User 1</h5>
+                                  <p>great work!</p>
+                                </div>
+                              </li>
+                          </ul>
+                      </div>
+                    </li>
+                <li>
+                  <a href="#">21 000 Job Seekers</a>
+                  <a href="#" class="float-right">4 March, 2019</a>
+                  <p>
+                    Curabitur purus sem, malesuada eu luctus eget, suscipit sed
+                    turpis. Nam pellentesque felis vitae justo accumsan, sed semper
+                    nisi sollicitudin...
+                  </p>
+                </li>
+                <li>
+                  <a href="#">Awesome Employers</a>
+                  <a href="#" class="float-right">1 April, 2019</a>
+                  <p>
+                    Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla
+                    odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec
+                    tempor nibh...
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="info-card" id="p-details">
+                  <h4 style="    color: white;margin-bottom: 2rem;">Project Details</h4>
+                  <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Number of Projects
+                        <span class="badge badge-primary badge-pill">54</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Projects Completed
+                        <span class="badge badge-primary badge-pill">20</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Your contribution
+                        <span class="badge badge-primary badge-pill">10</span>
+                      </li>
+                    </ul>
+              </div>
+            </div>
+          </div>    
+      </section>
+
+      <div class="add-btn"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+        <img src="baseline-add-24px.svg" alt="">
+      </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
